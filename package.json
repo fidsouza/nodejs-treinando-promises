@@ -1,0 +1,26 @@
+{
+  "name": "nodejs-promises",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "nyc": "^15.1.0",
+    "sinon": "^9.2.4"
+  },
+  "devDependencies": {
+    "mocha": "^8.3.0"
+  },
+  "scripts":{
+    "test:dev": "npx mocha -w --exit /test",
+    "test":"npx mocha --parallel test/",
+    "test:cov":"npx nyc --check-coverage --instrument --reporter=html --reporter=text npm test",
+    "start" : "node src/"
+
+
+  },
+  "author": "",
+  "license": "ISC"
+}
